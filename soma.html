@@ -27,18 +27,24 @@
             font-family: 'Arvo', serif;
             text-shadow: none;
         }
-      
+       .main{
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        }
     </style>
 </head>
 <body>
     <p>SOMA</p>
     
-    
+    <div class="main">
     <input placeholder="Digite um número" id="Soma1">
     <br>
     <input placeholder="Digite um número" id="Soma2">
     <button onclick="Soma()">somar</button>
-
+    </div>
     <script>
         function Soma(){
 
