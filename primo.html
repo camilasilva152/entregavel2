@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Número primos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+        body{
+            background-color: #C5D3F0;
+        }
+        p{
+            color: #BDB2FF;
+            font-family: 'Arvo', serif;
+            font-size: 24px;
+            text-align: center;
+        }
+        button {
+            background: #BDB2FF;
+            color: white;
+            border-style: outset;
+            border-color: #BDB2FF;
+            border-radius: 15%;
+            height: 30px;
+            width: 55px;
+            font-family: 'Arvo', serif;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+        <p>Insira um número</p>
+        <input id="primo">
+        <button onclick="isPrime()">Enviar</button>
+    <script>
+    function isPrime() {
+        let n = document.querySelector("#primo").value;
+        let c = 0;
+    for (let j = 2; j <  n; j++) {
+        if (n % j === 0) c++;
+    }
+    if (c === 0) {
+        alert(n + " " + "eh primo");
+    } else {
+        alert(n + " " + "nao eh primo");
+    }
+}
+    </script>
+</body>
+</html>

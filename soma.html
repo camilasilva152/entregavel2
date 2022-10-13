@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+        body{
+            background-color: #C5D3F0;
+        }
+        p{
+            color: #BDB2FF;
+            font-family: 'Arvo', serif;
+            font-size: 24px;
+            text-align: center;
+        }
+        button {
+            background: #BDB2FF;
+            color: white;
+            border-style: outset;
+            border-color: #BDB2FF;
+            border-radius: 15%;
+            height: 30px;
+            width: 55px;
+            font-family: 'Arvo', serif;
+            text-shadow: none;
+        }
+      
+    </style>
+</head>
+<body>
+    <p>SOMA</p>
+    
+    
+    <input placeholder="Digite um número" id="Soma1">
+    <br>
+    <input placeholder="Digite um número" id="Soma2">
+    <button onclick="Soma()">somar</button>
+
+    <script>
+        function Soma(){
+
+            let a = Number(document.querySelector("#Soma1").value);
+            let b = Number(document.querySelector("#Soma2").value);
+            let n = a + b;
+            alert("Resultado é " + n);
+        }
+    </script>
+</body>
+</html>

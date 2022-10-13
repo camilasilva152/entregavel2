@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicksort</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+        body{
+            background-color: #C5D3F0;
+        }
+        p{
+            color: #BDB2FF;
+            font-family: 'Arvo', serif;
+            font-size: 24px;
+            text-align: center;
+        }
+        button {
+            background: #BDB2FF;
+            color: white;
+            border-style: outset;
+            border-color: #BDB2FF;
+            border-radius: 15%;
+            height: 30px;
+            width: 55px;
+            font-family: 'Arvo', serif;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Insira os números separados por vírgula</p>
+    <input id="quick">
+    <button onclick="mostrarQuicksort()">Enviar</button>
+    <script>
+        function mostrarQuicksort() {
+            let array = document.querySelector("#quick").value;
+            array = array.split(",");
+            array = array.map(Number);
+            alert(quicksort(array).toString());
+        }
+        
+        function quicksort(array) {
+        if (array && array.length >= 1) {
+        let pivot = array.shift();
+        let left = [];
+        let right = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] < pivot) {
+                left.push(array[i]);
+            } else {
+                right.push(array[i]);
+            }
+        }
+        return quicksort(left).concat(pivot, quicksort(right));
+    } else {
+        return [];
+    }
+}
+    </script>
+</body>
+</html>

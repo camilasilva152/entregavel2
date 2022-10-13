@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mdc</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+        body{
+            background-color: #C5D3F0;
+        }
+        p{
+            color: #BDB2FF;
+            font-family: 'Arvo', serif;
+            font-size: 24px;
+            text-align: center;
+        }
+        button {
+            background: #BDB2FF;
+            color: white;
+            border-style: outset;
+            border-color: #BDB2FF;
+            border-radius: 15%;
+            height: 30px;
+            width: 55px;
+            font-family: 'Arvo', serif;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <p>maximo divisor comum</p>
+    <input id="Mdc1">
+    <input id="Mdc2">
+    <button onclick="gcd()">Enviar</button>
+    <script>
+        function gcd() {
+            let a = document.querySelector("#Mdc1").value;
+            let b = document.querySelector("#Mdc2").value;
+            if (isNaN(a) && isNaN(b)) {
+                alert("numeros inválidos");
+                return;
+            }
+            let d = Math.min(a, b);
+            while (d > 1) {
+                                if (a % d === 0 && b % d === 0) {
+                    break;
+                }
+                d--;
+            }
+            alert(d);
+}
+    </script>
+</body>
+</html>
